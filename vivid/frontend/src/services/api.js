@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://notessummarizer-production.up.railway.app';
+const API_URL = "https://notessummarizer-production.up.railway.app"; // backend base URL
 
 // Create axios instance with base configuration
 const api = axios.create({
@@ -41,29 +41,28 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Login User
-export const loginUser = async (userData) => {
-  try {
-    const response = await api.post('/login', userData);
-    
-    // Save token upon successful login
-    if (response.data.token) {
-      TokenService.saveToken(response.data.token);
-    }
-    
-    return response.data;
-  } catch (error) {
-    throw error.response ? error.response.data : new Error('Login failed');
-  }
-};
+// ===== Auth APIs =====
 
 // Signup User
 export const signupUser = async (userData) => {
   try {
-    const response = await api.post('/signup', userData);
+    const response = await api.post('/api/signup', userData);
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : new Error('Signup failed');
+  }
+};
+
+// Login User
+export const loginUser = async (userData) => {
+  try {
+    const response = await api.post('/api/login', userData);
+    if (response.data.token) {
+      TokenService.saveToken(response.data.token);
+    }
+    return response.data;
+  } catch (error) {
+    throw error.response ? error.response.data : new Error('Login failed');
   }
 };
 
@@ -72,13 +71,15 @@ export const logoutUser = () => {
   TokenService.removeToken();
 };
 
+// ===== PDF APIs =====
+
 // Upload PDF
 export const uploadPDF = async (file) => {
   const formData = new FormData();
   formData.append('pdf', file);
 
   try {
-    const response = await api.post('/upload-pdf', formData, {
+    const response = await api.post('/api/upload-pdf', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
@@ -89,20 +90,24 @@ export const uploadPDF = async (file) => {
   }
 };
 
+// ===== Summarization APIs =====
+
 // Summarize Text
 export const summarizeText = async (text) => {
   try {
-    const response = await api.post('/summarize', { text });
+    const response = await api.post('/api/summarize', { text });
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : new Error('Summarization failed');
   }
 };
 
+// ===== User APIs =====
+
 // Get User Profile
 export const getUserProfile = async () => {
   try {
-    const response = await api.get('/user-profile');
+    const response = await api.get('/api/user-profile');
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : new Error('Failed to fetch user profile');
@@ -110,5 +115,3 @@ export const getUserProfile = async () => {
 };
 
 export default api;
-
-
