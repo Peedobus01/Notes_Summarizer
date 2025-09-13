@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://notessummarizer-production.up.railway.app/';
+const API_URL = 'https://notessummarizer-production.up.railway.app';
 
 // Create axios instance with base configuration
 const api = axios.create({
@@ -110,4 +110,5 @@ export const getUserProfile = async () => {
 };
 
 export default api;
+
 
