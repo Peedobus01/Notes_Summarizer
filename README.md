@@ -60,44 +60,42 @@ This tool is designed to save time during exam preparation by automatically cond
 
 ---
 
-## ⚙️ Setup Instructions
+### 🌐 Live Deployment
+The project is already deployed and accessible online:
+- Frontend (Vercel): [https://your-frontend.vercel.app](https://your-frontend.vercel.app)  
+- Backend (Railway): [https://your-backend.up.railway.app](https://your-backend.up.railway.app)  
 
-### 🔹 Backend Setup
-```bash
+To run the project locally follow the below instructions
+
+### Backend Setup
 cd backend
 npm install
 npm start
 
+### Frontend Setup
+cd frontend
+npm install
+npm start
 
-
-
-
-# 📘 AI Notes Summarizer
-
-## 🚀 Project Overview
-An AI-powered notes summarization application that helps students quickly revise important concepts from their study materials.
-
-### Key Features
-- 👤 User Authentication (Signup/Login)
-- 📄 PDF Upload & Text Extraction
-- 🤖 AI-Powered Summarization
-- 💾 Secure Data Storage
-
-## 🛠️ Technologies Used
-- **Frontend:** React (Vercel)
-- **Backend:** Node.js + Express (Railway)
-- **Database:** MongoDB Atlas
-- **AI:** Google Gemini API
-- **Authentication:** JWT
-- **File Handling:** Multer
-
-## ⚙️ Prerequisites
-- Node.js v16 or later
-- npm (included with Node.js)
-- MongoDB Atlas account
+## Prerequisites
+- Node.js (v14 or later)
+- MongoDB
 - Gemini API Key
 
-## 📦 Setup Instructions
+### Gemini API Configuration
+1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Create a new API key
+3. Configure the API key:
+
+```bash
+# For Windows (PowerShell)
+$env:GEMINI_API_KEY='your_api_key_here'
+
+# For Unix/Mac
+export GEMINI_API_KEY='your_api_key_here'
+```
+
+## Installation
 
 ### Backend Setup
 ```bash
@@ -105,7 +103,6 @@ cd backend
 npm install
 npm start
 ```
-Server runs at: http://localhost:5000
 
 ### Frontend Setup
 ```bash
@@ -113,88 +110,68 @@ cd frontend
 npm install
 npm start
 ```
-React app runs at: http://localhost:3000
 
-### Environment Configuration
-1. Create `.env` in backend directory:
-```env
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-GEMINI_API_KEY=your_gemini_api_key
-PORT=5000
+## Application Structure
+```
+project/
+├── backend/
+│   ├── server.js          # Express server configuration
+│   ├── package.json       # Backend dependencies
+│   └── uploads/           # Temporary PDF storage
+├── frontend/
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── components/    # React components
+│   │   ├── pages/        # Page components
+│   │   ├── services/     # API services
+│   │   └── App.js        # Main application component
+│   └── package.json      # Frontend dependencies
+└── README.md
 ```
 
-2. Create `.env` in frontend directory:
-```env
-REACT_APP_API_URL=http://localhost:5000/api
-```
+### Authentication
+- `POST /api/signup`: User registration
+- `POST /api/login`: User authentication
+- `GET /api/user-profile`: Get user profile
 
-## 🏗️ System Architecture
+### Document Processing
+- `POST /api/upload-pdf`: PDF upload and text extraction
+- `POST /api/summarize`: Text summarization
+- `POST /api/summarize-advanced`: Advanced summarization options
 
-### Data Models
-
-#### User Schema
-```javascript
-{
-  username: String,
-  email: String,
-  password: String, // hashed
-  createdAt: Date
-}
-```
-
-### Component Structure
-- 🔐 Authentication
-  - Login
-  - Signup
-- 📊 Dashboard
-  - PDF Upload
-  - Summary Display
-- 🔄 API Integration
-  - PDF Processing
-  - Gemini AI Summarization
-
-## 🔐 Security Features
-- Password hashing with bcrypt
+## Security Features
 - JWT-based authentication
-- Environment variables for secrets
-- Secure file upload handling
-- Temporary PDF storage
+- Password hashing with bcrypt
+- Protected API routes
+- File upload validation
+- Rate limiting
+- Input sanitization
 
-## 📝 API Documentation
+## Error Handling
+- Comprehensive error messages
+- Client-side validation
+- Server-side validation
+- File type and size validation
+- API error handling
 
-### Authentication Endpoints
-- POST `/api/signup` - Create new user
-- POST `/api/login` - User login
-- GET `/api/user-profile` - Get user profile
+## Future Enhancements
+- [ ] Advanced summarization options
+- [ ] Multiple file upload support
+- [ ] Summary history
+- [ ] Export functionality
+- [ ] Custom AI model selection
+- [ ] Enhanced error reporting
+- [ ] User preferences
+- [ ] Analytics dashboard
 
-### PDF Processing
-- POST `/api/upload-pdf` - Upload PDF
-- POST `/api/summarize` - Generate summary
+## Acknowledgments
+- Google Gemini AI for providing the summarization capabilities
+- PDF-Parse for PDF text extraction
+- MongoDB for database services
 
-## 🚀 Deployment
-- Frontend: Vercel
-- Backend: Railway
-- Database: MongoDB Atlas
 
-## 📸 Demo
-[Add screenshots or demo video link here]
 
-## 🔄 Development Workflow
-1. Clone repository
-2. Set up environment variables
-3. Install dependencies
-4. Start development servers
 
-## 📋 TODO
-- [ ] Advanced error handling
-- [ ] Enhanced PDF text extraction
-- [ ] Improved summarization accuracy
-- [ ] User preferences storage
 
-## 👥 Contributing
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
-5. Open pull request
+
