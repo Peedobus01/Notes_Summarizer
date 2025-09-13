@@ -1,5 +1,79 @@
 # 📘 AI Notes Summarizer
 
+## 👤 Author
+- **Name**: Subhodeep Paul  
+- **University**: Indian Institute of Technology Guwahati (IITG)  
+- **Department**: Mechanical Engineering  
+
+---
+
+## 🚀 Project Overview
+**AI Notes Summarizer** is a web application that helps students quickly summarize their lecture slides or notes.  
+It allows users to:
+- Create an account (Signup/Login)
+- Upload lecture slides or notes in **PDF format**
+- Extract raw text from PDFs
+- Generate **concise summaries** using Google Gemini AI  
+
+This tool is designed to save time during exam preparation by automatically condensing key topics, formulas, and takeaways.  
+
+---
+
+## 📋 Features
+- 🔐 **User Authentication** (Signup/Login with JWT)  
+- 📂 **PDF Upload & Text Extraction**  
+- 🤖 **AI-powered Text Summarization** (Gemini API)  
+- 🎨 **Simple and Intuitive UI**  
+
+---
+
+## 📸 Screenshots
+
+### 🔹 Login Page
+![Login Page](./screenshots/login.png)
+
+### 🔹 Signup Page
+![Signup Page](./screenshots/signup.png)
+
+### 🔹 Dashboard (PDF Upload)
+![Dashboard](./screenshots/dashboard.png)
+
+### 🔹 Summary Output
+![Summary](./screenshots/summary.png)
+
+---
+
+## 🎥 Demo Video (Optional)
+👉 You can upload a short walkthrough video (2–3 mins) to YouTube or Google Drive and paste the link here.  
+
+**Demo Video Link:** [Upload your demo video here]  
+
+---
+
+## 🛠️ Technologies Used
+- **Frontend**: React (deployed on Vercel)  
+- **Backend**: Node.js + Express (deployed on Railway)  
+- **Database**: MongoDB Atlas (cloud-hosted)  
+- **AI Integration**: Google Gemini API  
+- **Authentication**: JWT-based login system  
+- **File Handling**: Multer (for PDF uploads)  
+
+---
+
+## ⚙️ Setup Instructions
+
+### 🔹 Backend Setup
+```bash
+cd backend
+npm install
+npm start
+
+
+
+
+
+# 📘 AI Notes Summarizer
+
 ## 🚀 Project Overview
 An AI-powered notes summarization application that helps students quickly revise important concepts from their study materials.
 
