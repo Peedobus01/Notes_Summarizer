@@ -30,16 +30,16 @@ This tool is designed to save time during exam preparation by automatically cond
 ## 📸 Screenshots
 
 ### 🔹 Login Page
-![Login Page](./screenshots/login.png)
+![Login Page](./vivid/screenshots./login.png)
 
 ### 🔹 Signup Page
-![Signup Page](./screenshots/signup.png)
+![Signup Page](./vivid/screenshots./signup.png)
 
 ### 🔹 Dashboard (PDF Upload)
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./vivid/screenshots./dashboard.png)
 
 ### 🔹 Summary Output
-![Summary](./screenshots/summary.png)
+![Summary](./vivid/screenshots./summary.png)
 
 ---
 
