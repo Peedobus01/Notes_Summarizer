@@ -140,8 +140,6 @@ After setting up the project structure (React frontend + Express/MongoDB backend
 **AI Response (excerpt):**  
 "Here’s the Express code for `/signup` and `/login` routes with password hashing using bcrypt and JWT token generation..."  
 
----
-
 **Prompt Example (for frontend API integration):**  
 *"Write an `api.js` file for the frontend that connects to the backend using axios. Handle login, signup, PDF upload, and text summarization with JWT authentication."*
 
@@ -150,8 +148,8 @@ After setting up the project structure (React frontend + Express/MongoDB backend
 ```javascript
 import axios from 'axios';
 const API_URL = 'https://notessummarizer-production.up.railway.app/api';
-...
-```"
+..."
+```
 
 ---
 
