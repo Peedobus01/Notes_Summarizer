@@ -2,7 +2,7 @@
 
 ## Author
 - **Name**: Subhodeep Paul
-- **University**: Indian Institute of Technology, Guwahati (IITG)
+- **University**: Indian Institute of Technology Guwahati (IITG)
 - **Department**: Mechanical Engineering
 
 ---
