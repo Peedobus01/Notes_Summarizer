@@ -60,15 +60,7 @@ The project is already deployed and accessible online:
 
 To run the project locally follow the below instructions
 
-### Backend Setup
-cd backend
-npm install
-npm start
-
-### Frontend Setup
-cd frontend
-npm install
-npm start
+---
 
 ## Prerequisites
 - Node.js (v14 or later)
@@ -87,6 +79,7 @@ $env:GEMINI_API_KEY='your_api_key_here'
 # For Unix/Mac
 export GEMINI_API_KEY='your_api_key_here'
 ```
+---
 
 ## Installation
 
@@ -103,6 +96,8 @@ cd frontend
 npm install
 npm start
 ```
+
+---
 
 ## Application Structure
 ```
@@ -133,6 +128,33 @@ project/
 - `POST /api/summarize`: Text summarization
 - `POST /api/summarize-advanced`: Advanced summarization options
 
+---
+
+## Development Interaction Logs (with AI Assistants)
+
+After setting up the project structure (React frontend + Express/MongoDB backend), I used AI to streamline code generation for specific modules.
+
+**Prompt Example (for backend auth):**  
+*"Build login and signup endpoints in Express.js using JWT authentication and MongoDB as the database."*
+
+**AI Response (excerpt):**  
+"Here’s the Express code for `/signup` and `/login` routes with password hashing using bcrypt and JWT token generation..."  
+
+---
+
+**Prompt Example (for frontend API integration):**  
+*"Write an `api.js` file for the frontend that connects to the backend using axios. Handle login, signup, PDF upload, and text summarization with JWT authentication."*
+
+**AI Response (excerpt):**  
+"Here’s the corrected `api.js`:  
+```javascript
+import axios from 'axios';
+const API_URL = 'https://notessummarizer-production.up.railway.app/api';
+...
+```"
+
+---
+
 ## Security Features
 - JWT-based authentication
 - Password hashing with bcrypt
@@ -141,12 +163,16 @@ project/
 - Rate limiting
 - Input sanitization
 
+---
+
 ## Error Handling
 - Comprehensive error messages
 - Client-side validation
 - Server-side validation
 - File type and size validation
 - API error handling
+
+---
 
 ## Future Enhancements
 - Advanced summarization options
@@ -158,13 +184,11 @@ project/
 - User preferences
 - Analytics dashboard
 
+---
+
 ## Acknowledgments
 - Google Gemini AI for providing the summarization capabilities
 - PDF-Parse for PDF text extraction
 - MongoDB for database services
 
-
-
-
-
-
+---
