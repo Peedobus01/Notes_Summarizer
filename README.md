@@ -1,19 +1,19 @@
 # AI Notes Summarizer
 
 ## Author
-- **Name**: Subhodeep Paul  
-- **University**: Indian Institute of Technology Guwahati (IITG)  
-- **Department**: Mechanical Engineering  
+- **Name**: Subhodeep Paul
+- **University**: Indian Institute of Technology Guwahati (IITG)
+- **Department**: Mechanical Engineering
 
 ---
 
 ## Project Overview
-**AI Notes Summarizer** is a web application that helps students quickly summarize their lecture slides or notes.  
+**AI Notes Summarizer** is a web application that helps students quickly summarize their lecture slides or notes. 
 It allows users to:
 - Create an account (Signup/Login)
 - Upload lecture slides or notes in **PDF format**
 - Extract raw text from PDFs
-- Generate **concise summaries** using Google Gemini AI  
+- Generate **concise summaries** using Google Gemini AI
 
 This tool is designed to save time during exam preparation by automatically condensing key topics, formulas, and takeaways.  
 
@@ -140,7 +140,7 @@ After setting up the project structure (React frontend + Express/MongoDB backend
 **AI Response (excerpt):**  
 "Here’s the Express code for `/signup` and `/login` routes with password hashing using bcrypt and JWT token generation..."  
 
----
+- - -
 
 **Prompt Example (for frontend API integration):**  
 *"Write an `api.js` file for the frontend that connects to the backend using axios. Handle login, signup, PDF upload, and text summarization with JWT authentication."*
@@ -153,7 +153,7 @@ const API_URL = 'https://notessummarizer-production.up.railway.app/api';
 ..."
 ```
 
----
+- - -
 
 ###  Prototype Interaction Logs (with Gemini AI)
 
