@@ -140,6 +140,8 @@ After setting up the project structure (React frontend + Express/MongoDB backend
 **AI Response (excerpt):**  
 "Here’s the Express code for `/signup` and `/login` routes with password hashing using bcrypt and JWT token generation..."  
 
+---
+
 **Prompt Example (for frontend API integration):**  
 *"Write an `api.js` file for the frontend that connects to the backend using axios. Handle login, signup, PDF upload, and text summarization with JWT authentication."*
 
@@ -150,6 +152,26 @@ import axios from 'axios';
 const API_URL = 'https://notessummarizer-production.up.railway.app/api';
 ..."
 ```
+
+---
+
+###  Prototype Interaction Logs (with Gemini AI)
+
+Once the project was functional, I tested PDF uploads and summarization. Below is a sample:
+
+**Prompt Sent to Gemini:**  
+"Please provide a comprehensive summary of the following text.  
+
+Text to summarize:  
+Dynamics of Machinery – Static force analysis, Dynamic force analysis, Turning moment diagrams, Flywheels, Balancing."
+
+**Gemini AI Response:**  
+"Summary:  
+1. Static force analysis – equilibrium of forces  
+2. Dynamic force analysis – includes inertia forces  
+3. Turning moment diagrams – study fluctuation of torque  
+4. Flywheels – regulate speed variations  
+5. Balancing – reduces vibration from unbalanced parts"
 
 ---
 
