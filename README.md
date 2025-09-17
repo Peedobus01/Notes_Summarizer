@@ -1,13 +1,13 @@
-# 📘 AI Notes Summarizer
+# AI Notes Summarizer
 
-## 👤 Author
+## Author
 - **Name**: Subhodeep Paul  
 - **University**: Indian Institute of Technology Guwahati (IITG)  
 - **Department**: Mechanical Engineering  
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 **AI Notes Summarizer** is a web application that helps students quickly summarize their lecture slides or notes.  
 It allows users to:
 - Create an account (Signup/Login)
@@ -19,15 +19,15 @@ This tool is designed to save time during exam preparation by automatically cond
 
 ---
 
-## 📋 Features
-- 🔐 **User Authentication** (Signup/Login with JWT)  
-- 📂 **PDF Upload & Text Extraction**  
-- 🤖 **AI-powered Text Summarization** (Gemini API)  
-- 🎨 **Simple and Intuitive UI**  
+## Features
+- **User Authentication** (Signup/Login with JWT)  
+- **PDF Upload & Text Extraction**  
+- **AI-powered Text Summarization** (Gemini API)  
+- **Simple and Intuitive UI**  
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### 🔹 Login Page
 ![Login Page](./vivid/screenshots./login.png)
@@ -39,18 +39,11 @@ This tool is designed to save time during exam preparation by automatically cond
 ![Dashboard](./vivid/screenshots./dashboard.png)
 
 ### 🔹 Summary Output
-![Summary](./vivid/screenshots./summary.png)
+![Summary](./vivid/screenshots./summary.png)  
 
 ---
 
-## 🎥 Demo Video (Optional)
-👉 You can upload a short walkthrough video (2–3 mins) to YouTube or Google Drive and paste the link here.  
-
-**Demo Video Link:** [Upload your demo video here]  
-
----
-
-## 🛠️ Technologies Used
+## Technologies Used
 - **Frontend**: React (deployed on Vercel)  
 - **Backend**: Node.js + Express (deployed on Railway)  
 - **Database**: MongoDB Atlas (cloud-hosted)  
@@ -60,10 +53,10 @@ This tool is designed to save time during exam preparation by automatically cond
 
 ---
 
-### 🌐 Live Deployment
+### Live Deployment
 The project is already deployed and accessible online:
-- Frontend (Vercel): [https://your-frontend.vercel.app](https://your-frontend.vercel.app)  
-- Backend (Railway): [https://your-backend.up.railway.app](https://your-backend.up.railway.app)  
+- Frontend (Vercel): [https://notes-summarizer-coral.vercel.app/login](https://notes-summarizer-coral.vercel.app/login)  
+- Backend (Railway): [notessummarizer-production.up.railway.app](notessummarizer-production.up.railway.app)  
 
 To run the project locally follow the below instructions
 
@@ -156,14 +149,14 @@ project/
 - API error handling
 
 ## Future Enhancements
-- [ ] Advanced summarization options
-- [ ] Multiple file upload support
-- [ ] Summary history
-- [ ] Export functionality
-- [ ] Custom AI model selection
-- [ ] Enhanced error reporting
-- [ ] User preferences
-- [ ] Analytics dashboard
+- Advanced summarization options
+- Multiple file upload support
+- Summary history
+- Export functionality
+- Custom AI model selection
+- Enhanced error reporting
+- User preferences
+- Analytics dashboard
 
 ## Acknowledgments
 - Google Gemini AI for providing the summarization capabilities
